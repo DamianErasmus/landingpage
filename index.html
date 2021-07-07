@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="main.js" defer></script>
+    <title>Tshirt Landing Page</title>
+</head>
+<body>
+    <!-- Header -->
+    <input type="checkbox" id="check">
+    <header>
+        <h2><a href="#" class="logo">Logo</a></h2>
+        <div class="navigation"><!-- Look in template 1 for css -->
+            <a href="#">Home</a>
+            <a href="#tshirts">TShirts</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <label for="check"> 
+            <i class="fas fa-bars menu-btn"></i>
+            <i class="fas fa-times close-btn"></i>
+        </label> 
+    </header>
+
+    <!-- Section A: Get In Touch -->
+    <div class="section_a">
+        
+        <img src="images/section_a/calvin-lupiya--yPg8cusGD8-unsplash.jpg" class="slideshow-img" alt="Photo by Calvin Lupiya on Unsplash">
+        <img src="images/section_a/chuttersnap-R2yGogv8NZM-unsplash.jpg" class="slideshow-img" alt="Photo by CHUTTERSNAP on Unsplash">
+        <img src="images/section_a/frame-kings-cvGPSaoemuw-unsplash.jpg" class="slideshow-img" alt="Photo by Frame Kings on Unsplash">
+        <img src="images/section_a/ian-dooley-TT-ROxWj9nA-unsplash.jpg" class="slideshow-img" alt="Photo by ian dooley on Unsplash">
+        <img src="images/section_a/joshua-rawson-harris-tIgzNzoi2ME-unsplash.jpg" class="slideshow-img" alt="Photo by Joshua Rawson-Harris on Unsplash ">
+
+        <div class="git">
+            <h3>Heading</h3>
+            <h4>Subheading</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, facere dolorum. At consequatur cumque ducimus recusandae assumenda qui obcaecati voluptatibus sequi. A, at. Consequatur, nam magnam ratione quis amet laudantium.</p>
+            <a href="#" class="git-btn">Get In Touch</a>
+        </div>
+    </div>
+
+    <!-- Section B: Tshirts -->
+    <div class="section_b" id="tshirts">
+        <h3>Featured TShirts</h3>
+
+         <!-- Carousel -->
+        <div class="carousel">
+            <button class="prev"><i class="fas fa-angle-left"></i></button>
+            <div class="siema">
+                <div class="tshirt">
+                    <h4>Tshirt Name</h4>
+                    <img src="/images/section_b/aaron-weiss-sBJ4ZWUXhWo-unsplash.jpg" alt="Photo by Aaron Weiss on Unsplash" >
+                    <p>Price: R420</p>
+                    <button class="git">Get In Touch</button>
+                </div>
+                <div class="tshirt">
+                    <h4>Tshirt Name</h4>
+                    <img src="/images/section_b/ian-dooley-FoF0w-d6Z74-unsplash.jpg" alt="Photo by ian dooley on Unsplash">
+                    <p>Price: R420</p>
+                    <button class="git">Get In Touch</button>
+                </div>
+                <div class="tshirt">
+                    <h4>Tshirt Name</h4> 
+                    <img src="/images/section_b/ramille-soares--4LszIR1OZ4-unsplash.jpg" alt="Photo by Ramille Soares on Unsplash">
+                    <p>Price: R420</p>
+                    <button class="git">Get In Touch</button>
+                </div>
+                <div class="tshirt">
+                    <h4>Tshirt Name</h4> 
+                    <img src="/images/section_b/rubens-nguyen-Fy7RX0gHZRM-unsplash.jpg" alt="Photo by Rubens Nguyen on Unsplash">
+                    <p>Price: R420</p>
+                    <button class="git">Get In Touch</button>
+                </div>
+            </div>       
+            <button class="next"><i class="fas fa-angle-right"></i></button>
+        </div>
+    </div>
+
+    <!-- Sienna slider on featured section-->
+    <script src="/siema.min.js"></script>
+    <script>
+        const mySiena = new Siema({
+            duration: 600,
+            loop: true,
+            perPage: 1
+        });
+    
+        document.querySelector('.prev').addEventListener('click', () => mySiena.prev());
+        document.querySelector('.next').addEventListener('click', () => mySiena.next());
+    </script>
+
+    <!-- About Section Maybe-->
+    <div class="section_c" id="about">
+        <h3>About Us</h3>
+        <div class="about_us">
+            <img src="/images/section_c/kyle-simmons-7SjiMVQ8i10-unsplash.jpg" alt="dumpster" class="slide_in from_left">
+            <p class="slide_in from_right">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, numquam animi perferendis et facere soluta velit, quo inventore esse quae ullam vero iste dolor maiores eligendi fuga eius veritatis voluptatibus!</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="section-footer">
+        <div class="container">
+            <div class="contact_details" id="contact">
+                <h3>Contact Details</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum soluta eos iusto.</p>
+            </div>
+            <div class="social_media">
+                <h3>Social Media</h3>
+                <div class="media-icons">
+                    <a href="http://facebook.com"><i class="fab fa-facebook-f"></i></a>
+                    <a href="http://twitter.com"><i class="fab fa-twitter"></i></a>
+                    <a href="http://instagram.com"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3>Get In Touch</h3>
+                <form name="email-form" method="POST" data-netlify="true">
+                    <div class="email-form">
+                        <span class="form-control-wrap">
+                            <input type="email" name="email" id="email" size="40" class="form-control" placeholder="Email"/>
+                        </span>
+                        <button type="submit" class="form-control submit">
+                        <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

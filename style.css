@@ -1,0 +1,698 @@
+@import url('https://fonts.googleapis.com/css2?family=Maitree:wght@300;500;700&display=swap');
+
+:root {
+    --color-1: #000;
+    --color-2: #555;
+    --color-3: #191970;
+    --color-4: #ddd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Maitree', serif;
+    letter-spacing: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Header Section */
+header {
+    /*background-color: rgba(139, 0, 0, 0.5);*/
+    background-color: transparent;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    padding: 1rem 10rem;
+    display: flex;
+    justify-content: space-between;
+    transition: background-color 450ms ease-in-out;
+}
+
+header .logo {
+    color: var(--color-4);
+    text-shadow: 2px 2px 2px var(--color-1);
+    font-size: 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+header .navigation {
+    padding: 1rem 0 0 1rem;
+}
+
+header .navigation a {
+    position: relative;
+    text-align: right;
+    font-size: 20px;
+    color: var(--color-4);
+    text-shadow: 2px 2px 2px var(--color-1);
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 3px;
+    transition: 0.25s ease-in-out;
+    padding: 0 1rem;
+}
+
+header .navigation a:not(:last-child) {
+    margin-right: 1rem;
+}
+
+header .navigation a:hover {
+    background-color: var(--color-3);
+    border-radius: 25px;
+}
+
+label {
+    display: none;
+}
+
+#check {
+    z-index: 3;
+    display: none;
+}
+
+.nav_scrolled {
+    background-color: var(--color-3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Section A */
+.section_a {
+    height: 700px;
+    max-width: 100vw;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.slideshow-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+    mix-blend-mode: screen;
+    overflow-x: hidden;
+}
+
+.slideshow-img:not(:first-child) {
+    opacity: 0;
+}
+
+.section_a .git {
+    position: absolute;
+    top: 150px;
+    left: 300px;
+    width: 600px;
+}
+
+.section_a .git h3 {
+    font-size: 50px;
+    margin-bottom: 0;
+    color: var(--color-3);
+    text-shadow: 2px 2px 2px var(--color-1);
+    /*-webkit-text-stroke-width: 2.5px;
+    -webkit-text-stroke-color: var(--color-1);*/
+}
+
+.section_a .git h4{
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 40px;
+    color: var(--color-2);
+    text-shadow: 2px 2px 2px var(--color-1);
+}
+
+.section_a .git p {
+    color: var(--color-4);
+    text-shadow: 2px 2px 2px var(--color-1);
+    font-weight: bold;
+    font-size: 22px;
+    padding-bottom: 1.5rem;
+}
+
+.section_a .git-btn {
+    z-index: 2;
+    color: var(--color-4);
+    background: var(--color-3);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    border-radius: 2rem;
+    transition: 0.2s ease-in-out;
+}
+
+.section_a .git-btn:hover {
+    font-weight: 700;
+    background: var(--color-1);
+}
+
+
+
+
+
+
+
+
+/* Section B */
+
+.section_b {
+    height: 700px;
+    padding-top: 90px;
+    text-align: center;
+    background: var(--color-2);
+}
+
+
+.section_b h3 {
+    padding-top: 20px;
+    font-size: 40px;
+    color: var(--color-3);
+    text-shadow: 1px 1px 1px var(--color-1);
+}
+
+.section_b .siema img {
+    height: 300px;
+    max-width: 50vw;
+    border-radius: 50px;
+}
+
+.section_b .siema h4 {
+    font-size: 25px;
+}
+
+.section_b .siema p {
+    font-size: 20px;
+}
+
+.section_b .carousel {
+    margin: auto;
+    width: 80vw;
+    display: grid;
+    grid-template-columns: auto 60vw auto;
+}
+
+.section_b .carousel .prev,
+.section_b .carousel .next {
+    background: none;
+    border: none;
+    font-size: 3rem;
+    outline: none;
+}
+
+.section_b .carousel .prev {
+    text-align: right;
+}
+
+.section_b .carousel .next {
+    text-align: left;
+}
+
+.section_b .git {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--color-3);
+    background-color: var(--color-4);
+    border: 2px solid var(--color-1);
+    padding: 0 1.5rem;
+    border-radius: 10px;
+    transition: ease-in-out 200ms;
+}
+
+.section_b .git:hover {
+    cursor: pointer;
+    color: var(--color-1);
+    background-color: var(--color-3);
+}
+
+.section_b .prev:hover,
+.section_b .next:hover {
+    color: var(--color-3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Section C*/
+
+.section_c {
+    padding: 40px 0 20px 0;
+    position: static;
+    height: 500px;
+    text-align: center;
+    background: linear-gradient(var(--color-2), var(--color-4));
+    color: var(--color-1);
+    font-size: 20px;
+    line-height: 1.5rem;
+    overflow-x: hidden;
+}
+
+.section_c h3 {
+    font-size: 45px;
+    margin: 30px 0;
+    padding: 3rem 2rem 0 2rem;
+    color: var(--color-3);
+    text-shadow: 1px 1px 1px var(--color-1);
+}
+
+.section_c .about_us {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+}
+
+.section_c .about_us img {
+    width: 50%;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.section_c .about_us p {
+    margin: auto;
+    padding: 20px 100px 0 0;
+    line-height: 30px;
+}
+
+.from_left {
+    transform: translateX(-50%);
+}
+
+.from_right {
+    transform: translateX(50%);
+}
+
+.from_left,
+.from_right {
+    opacity: 0;
+    transition: 600ms ease-in;
+}
+
+.from_left.appear,
+.from_right.appear {
+    opacity: 1;
+    transform: translateX(0);
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+.section-footer {
+    margin: auto;
+    border-top: solid 2px black;
+    background: var(--color-4);
+    color: var(--color-1);
+    padding: 2rem 2rem;
+    font-size: 20px;
+    line-height: 1.5rem;
+    min-height: 150px;
+}
+
+.section-footer .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.section-footer h3 {
+    color: var(--color-1);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.section-footer p {
+    color: var(--color-2);
+}
+
+.social_media {
+    text-align: center;
+}
+
+.social_media h3 {
+    margin-bottom: 1rem;
+}
+
+.media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.media-icons a {
+    position: relative;
+    color: var(--color-1);
+    font-size: 30px;
+    transition: 0.3s;
+    transition-property: transform;
+}
+
+.media-icons a:not(:last-child) {
+    margin-right: 60px;
+}
+
+.media-icons a:hover {
+    color: var(--color-3);
+    transform: scale(1.5);
+}
+
+/* Email form*/
+.email-form {
+    width: 100%;
+    display: inline-block;
+    background-color: #fff;
+    position: relative;
+    border-radius: 20px;
+    line-height: 0;
+    margin-top: 1rem;
+}
+
+.email-form .form-control {
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+    color: var(--color-1);
+    background-color: transparent;
+    font-family: inherit;
+    margin: 0;
+    padding: 0 3rem 0 1.5rem;
+    width: 100%;
+    height: 45px;
+    border-radius: 20px;
+}
+
+.email-form .submit {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: var(--color-2);
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+    transition: ease-in-out 0.5s;
+}
+
+.email-form .submit:hover {
+    background-color: var(--color-3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Styling */
+@media (max-width: 950px) {
+    /* Small screen navigation */
+    header .navigation {
+        display: none;
+    }
+
+    label {
+        color: var(--color-4);
+        text-shadow: 2px 2px 2px var(--color-1);
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+        transition-property: color;
+    }
+
+    label:hover {
+        color: var(--color-3);
+    }
+
+    label .close-btn {
+        display: none;
+        top: 30px;
+        right: 30px;
+    }
+
+    #check:checked ~ header .navigation {
+        padding-top: 100px;
+        z-index: 2;
+        position: fixed;
+        background: rgba(33, 33, 33, 0.9);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #check:checked ~ header .navigation a{
+        color: var(--color-4);
+        font-weight: 700;
+        margin-right: 0;
+        margin-bottom: 50px;
+        letter-spacing: 2px;
+    }
+
+
+    #check:checked ~ header label .menu-btn {
+        display: none;
+    }
+
+    #check:checked ~ header label .close-btn {
+        z-index: 2;
+        display: block;
+        position: fixed;
+    }
+
+    label .menu-btn{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+
+    .section_a .git {
+        position: inherit;
+        left: 0;
+        width: 60%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .section_a .git h3 {
+        font-size: 50px;
+    }
+
+    .section_a .git h4 {
+        font-size: 45px;
+    }
+
+    .section_a .git p {
+        font-size: 20px;
+    }
+
+    .section_c {
+        height: auto;
+    }
+
+    .section_c .about_us {
+        grid-template-columns: repeat(1, 2fr);
+        grid-gap: 1rem;
+    }
+
+    .section_c .about_us p {
+        padding: 0 100px 100px 100px;
+        line-height: 50px;
+    }
+}
+
+@media (max-width:850px) {
+    header {
+        height: 100px;
+    }
+    
+    .section-footer .container {
+        grid-template-columns: repeat(1, 3fr);
+        grid-gap: 2rem;
+        text-align: center;
+        width: 70vw;
+        margin: auto;
+    }
+    .section_a {
+        height: 700px;
+    }  
+    .section_a .git {
+        top: 100px;
+    }
+    
+    .section_b {
+        padding-top: 150px;
+        height: 700px;
+    }
+}
+
+@media (max-width:500px) {
+    * {
+        letter-spacing: 0;
+    }
+
+    header {
+        padding: 20px 30px;
+    }
+    header .logo{
+        font-size: 30px;
+        margin-left: 0;
+    }
+
+    .section_a {
+        height: 700px;
+    }
+    .section_a .git h3 {
+        font-size: 40px;
+    }
+    .section_a .git h4 {
+        font-size: 30px;
+    }
+    .section_a .git p {
+        font-size: 1rem;
+    }
+    
+    .section_a .git {
+        top: 100px;
+        height: 500px;
+    }
+    
+    .section_b {
+        padding-top: 100px;
+        height: 500px;
+    }
+    .section_b .siema img {
+        height: 200px;
+    }
+    
+    .section_c {
+        padding-top: 150px;
+    }
+    .section_c h3 {
+        margin: 0;
+        padding: 10px 0;
+        font-size: 30px;
+    }
+    .section_c .about_us img {
+        padding: 5px 0;
+    }
+    .section_c .about_us p {
+        padding: 0 20px 20px 20px;
+        font-size: 15px;
+    }
+    
+    .section-footer {
+        height: 450px;
+        padding-top: 50px;
+        padding-bottom: 10px;
+        font-size: 20px;
+    }
+}
